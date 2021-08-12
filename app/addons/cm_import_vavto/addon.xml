@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<addon scheme="3.0">
+    <id>cm_import_vavto</id>
+    <version>0.7.1</version>
+    <priority>5000</priority>
+    <status>active</status>
+    <default_language>ru</default_language>
+    
+    <compatibility>
+      <dependencies>suppliers</dependencies>
+    </compatibility>
+    
+    <authors>
+	<author>
+		<name>Evgeniy Popov</name>
+		<email>canny@bk.ru</email>
+		<url></url>
+		<phone></phone>
+	</author>
+    </authors>
+	
+	<supplier>cannyMOD</supplier>
+    <supplier_link></supplier_link>
+	
+    <settings layout="separate">
+        <sections>
+            <section id="settings">
+                <items>
+                    <item id="settings">
+                        <type>template</type>
+                        <default_value>settings.tpl</default_value>
+                    </item>
+                    <item id="cron_key">
+                        <type>hidden</type>
+                        <default_value>0</default_value>
+                    </item>
+                    <item id="api_url">
+                        <type>input</type>
+                        <default_value>https://api.v-avto.ru/v1/</default_value>
+                    </item>
+                    <item id="api_key">
+                        <type>input</type>
+                        <default_value></default_value>
+                    </item>
+                    <item id="last_update">
+                        <type>hidden</type>
+                        <default_value>0</default_value>
+                    </item>
+                </items>
+            </section>
+        </sections>
+    </settings>
+	
+    <queries>
+  		<item for="install">
+			CREATE TABLE IF NOT EXISTS `?:cm_vavto_categories` (
+				`remote_category_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+				`remote_category_name` varchar(255),
+				`product_amount` smallint(5) unsigned NOT NULL DEFAULT '0',
+				`parsed` varchar(1) NOT NULL DEFAULT 'Y',
+				PRIMARY KEY  (`remote_category_id`), UNIQUE KEY (`remote_category_name`)
+			) Engine=MyISAM DEFAULT CHARSET UTF8;
+  		</item>
+		<item for="install">
+	                CREATE TABLE IF NOT EXISTS `?:cm_vavto_companies_categories` (
+        		        `remote_category_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+				`company_id` int(11) unsigned NOT NULL,
+            			`category_ids` varchar(255) NOT NULL DEFAULT '',
+            			PRIMARY KEY  (`remote_category_id`, `company_id`)
+	                ) Engine=MyISAM DEFAULT CHARSET UTF8;
+		</item>
+    </queries>
+    
+    <functions>
+        <item for="install">fn_cm_install</item>
+	<item for="uninstall">fn_cm_uninstall</item>
+    </functions>
+</addon>

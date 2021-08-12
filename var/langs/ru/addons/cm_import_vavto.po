@@ -1,0 +1,70 @@
+msgid ""
+msgstr "Project-Id-Version: tygh"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language-Team: Russian\n"
+"Language: ru_RU\n"
+
+msgctxt "Addons::name::cm_import_vavto"
+msgid "Synchronization of availability and prices of vavto"
+msgstr "CannyMOD: Синхронизация наличия и цен поставщика ВОСХОД"
+
+msgctxt "Addons::description::cm_import_vavto"
+msgid "Synchronizing with CRON"
+msgstr "Синхронизация через CRON."
+
+msgctxt "Languages::cm_import_vavto.auto_info"
+msgid "Use this link to automatically update via CRON:"
+msgstr "Используйте эту ссылку для автоматического обновления через CRON:"
+
+msgctxt "Languages::cm_import_vavto.currency_sync_auto"
+msgid "Automatic update via CRON"
+msgstr "Автоматическое обновление через CRON"
+
+msgctxt "Languages::cm_import_vavto.magic_keygen"
+msgid "Generate magic_key"
+msgstr "Сгенерировать magic_key"
+
+msgctxt "Languages::cm_import_vavto.magic_keygen_button"
+msgid "Generate"
+msgstr "Сгенерировать"
+
+msgctxt "SettingsOptions::cm_import_vavto::api_url"
+msgid "API url"
+msgstr "URL запроса API"
+
+msgctxt "SettingsOptions::cm_import_vavto::api_key"
+msgid "API key"
+msgstr "API ключ"
+
+msgctxt "Languages::cm_import_vavto.update_object_button"
+msgid "Update now"
+msgstr "Обновить сейчас"
+
+msgctxt "Languages::cm_import_vavto.update_object"
+msgid "Update object"
+msgstr "Обновить данные сейчас"
+
+msgctxt "Languages::cm_import_vavto"
+msgid "Catalog"
+msgstr "Увязка категорий Восход"
+
+msgctxt "Languages::cm_import_vavto.categories_binding"
+msgid "Categories binding"
+msgstr "Соответствие категорий ВОСХОД"
+
+msgctxt "Languages::cm_import_vavto.remote_category_id"
+msgid "Remote category id"
+msgstr "ID категории Восход"
+
+msgctxt "Languages::cm_import_vavto.local_categories"
+msgid "Local categories"
+msgstr "Локальные категории"
+
+msgctxt "Languages::cm_import_vavto.done"
+msgid "Import done"
+msgstr "Импорт завершен"
+
+msgctxt "Languages::cm_import_vavto.categories_bind_successfully"
+msgid "Categories bind successfully"
+msgstr "Категории успешно привязаны"
+
